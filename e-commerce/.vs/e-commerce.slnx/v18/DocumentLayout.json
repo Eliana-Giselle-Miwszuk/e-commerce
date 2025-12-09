@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\negocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\Class1.cs",
-              "RelativeDocumentMoniker": "Negocio\\Class1.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\Class1.cs",
-              "RelativeToolTip": "Negocio\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Negocio\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\AccesoDatos.cs",
+              "RelativeToolTip": "Negocio\\AccesoDatos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T03:45:32.962Z",
+              "WhenOpened": "2025-12-09T03:55:22.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Dominio\\Class1.cs",
-              "RelativeDocumentMoniker": "Dominio\\Class1.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Dominio\\Class1.cs",
-              "RelativeToolTip": "Dominio\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T03:45:20.334Z",
+              "DocumentIndex": 0,
+              "Title": "MenuWeb.Master",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeToolTip": "e-commerce\\MenuWeb.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-09T03:53:18.927Z",
               "EditorCaption": ""
             }
           ]
