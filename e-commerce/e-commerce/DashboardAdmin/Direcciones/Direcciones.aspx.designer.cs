@@ -7,38 +7,38 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace e_commerce
+namespace e_commerce.DashboardAdmin.Direcciones
 {
 
 
-    public partial class MenuWeb
+    public partial class Direcciones
     {
 
         /// <summary>
-        /// Control head.
+        /// Control LktAgregarDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.LinkButton LktAgregarDireccion;
 
         /// <summary>
-        /// Control form1.
+        /// Control lblMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
-        /// Control ContentPlaceHolder1.
+        /// Control gdDirecciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.GridView gdDirecciones;
     }
 }

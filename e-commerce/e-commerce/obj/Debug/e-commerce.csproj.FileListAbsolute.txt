@@ -57,3 +57,7 @@ C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\obj\Debu
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\obj\Debug\e-commerce.csproj.Up2Date
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\obj\Debug\e-commerce.dll
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\obj\Debug\e-commerce.pdb
+C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\bin\Dominio.dll
+C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\bin\Negocio.dll
+C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\bin\Dominio.pdb
+C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\e-commerce\bin\Negocio.pdb

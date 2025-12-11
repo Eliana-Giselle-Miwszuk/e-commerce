@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace e_commerce
+namespace e_commerce.DashboardAdmin
 {
 
 
-    public partial class MenuWeb
+    public partial class MenuAdmin
     {
 
         /// <summary>

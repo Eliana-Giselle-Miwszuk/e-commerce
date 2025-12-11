@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\dominio\\direccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\direccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\negocio\\direccionnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\direccionnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Default.aspx",
-              "RelativeDocumentMoniker": "e-commerce\\Default.aspx",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Default.aspx",
-              "RelativeToolTip": "e-commerce\\Default.aspx",
+              "DocumentIndex": 1,
+              "Title": "Direcciones.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx",
+              "RelativeToolTip": "e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-10T23:01:39.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Global.asax.cs",
-              "RelativeDocumentMoniker": "e-commerce\\Global.asax.cs",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Global.asax.cs",
-              "RelativeToolTip": "e-commerce\\Global.asax.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T22:59:51.957Z",
+              "WhenOpened": "2025-12-11T03:52:05.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Web.Release.config",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.Release.config",
-              "RelativeDocumentMoniker": "e-commerce\\Web.Release.config",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.Release.config",
-              "RelativeToolTip": "e-commerce\\Web.Release.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-10T22:58:36.825Z",
+              "Title": "Direccion.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Dominio\\Direccion.cs",
+              "RelativeDocumentMoniker": "Dominio\\Direccion.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Dominio\\Direccion.cs",
+              "RelativeToolTip": "Dominio\\Direccion.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA5wB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T03:50:51.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Web.Debug.config",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.Debug.config",
-              "RelativeDocumentMoniker": "e-commerce\\Web.Debug.config",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.Debug.config",
-              "RelativeToolTip": "e-commerce\\Web.Debug.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-10T22:58:34.12Z",
+              "Title": "DireccionNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\DireccionNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\DireccionNegocio.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\Negocio\\DireccionNegocio.cs",
+              "RelativeToolTip": "Negocio\\DireccionNegocio.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAUwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T03:09:21.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.config",
-              "RelativeDocumentMoniker": "e-commerce\\Web.config",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\Web.config",
-              "RelativeToolTip": "e-commerce\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-10T22:58:28.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuWeb.Master",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
-              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
-              "RelativeToolTip": "e-commerce\\MenuWeb.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-10T22:52:32.588Z",
+              "DocumentIndex": 0,
+              "Title": "Direcciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx.cs",
+              "RelativeDocumentMoniker": "e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx.cs",
+              "RelativeToolTip": "e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T02:50:24.564Z",
               "EditorCaption": ""
             }
           ]
