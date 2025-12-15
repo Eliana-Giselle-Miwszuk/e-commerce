@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\dashboardadmin\\direcciones\\direcciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|c:\\users\\eligi\\desktop\\proyectoprogra3\\e-commerce\\e-commerce\\dominio\\direccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|C:\\Users\\EliGi\\Desktop\\ProyectoProgra3\\e-commerce\\e-commerce\\dominio\\direccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\direccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,8 +38,7 @@
               "RelativeToolTip": "e-commerce\\DashboardAdmin\\Direcciones\\Direcciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-11T03:52:05.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T03:52:05.282Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Dominio\\Direccion.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA5wB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:50:51.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T03:50:51.127Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "Negocio\\DireccionNegocio.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAUwFYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:09:21.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T03:09:21.649Z"
             },
             {
               "$type": "Document",
