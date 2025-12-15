@@ -13,5 +13,12 @@ namespace e_commerce
         {
 
         }
+        protected void CerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Default.aspx");
+        }
+
+
     }
 }
