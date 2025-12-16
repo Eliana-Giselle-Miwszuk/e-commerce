@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carrito.cs" />
+    <Compile Include="CarritoItem.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="DetallePedido.cs" />
+    <Compile Include="Direccion.cs" />
+    <Compile Include="FormaEntrega.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
