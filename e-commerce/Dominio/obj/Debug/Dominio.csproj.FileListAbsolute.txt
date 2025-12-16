@@ -4,3 +4,9 @@ C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\Dominio\obj\Debug\D
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.dll
 C:\Users\EliGi\Desktop\ProyectoProgra3\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.pdb
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\bin\Debug\Dominio.dll
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\bin\Debug\Dominio.pdb
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.dll
+C:\Users\USUARIO\Desktop\Trabj Final diciembre 2025\e-commerce\e-commerce\Dominio\obj\Debug\Dominio.pdb

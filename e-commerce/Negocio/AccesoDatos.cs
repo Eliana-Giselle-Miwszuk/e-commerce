@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Negocio
 {
@@ -13,14 +13,11 @@ namespace Negocio
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector
-        {
-            get { return lector; }
-        }
+        public SqlDataReader Lector => lector;
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS;database=EcommerceDB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=EcommerceDB; integrated security=true");
             comando = new SqlCommand();
         }
 
@@ -28,6 +25,12 @@ namespace Negocio
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
+            comando.Parameters.Clear(); // Limpiar paraetros de llamadas anteriores
+        }
+
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void ejecutarLectura()
@@ -35,7 +38,9 @@ namespace Negocio
             comando.Connection = conexion;
             try
             {
-                conexion.Open();
+                if (conexion.State != System.Data.ConnectionState.Open)
+                    conexion.Open();
+
                 lector = comando.ExecuteReader();
             }
             catch (Exception ex)
@@ -49,7 +54,9 @@ namespace Negocio
             comando.Connection = conexion;
             try
             {
-                conexion.Open();
+                if (conexion.State != System.Data.ConnectionState.Open)
+                    conexion.Open();
+
                 comando.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -58,285 +65,35 @@ namespace Negocio
             }
         }
 
-        public int ejecutarAccion(bool retornarFilasAfectadas)
-        {
-            comando.Connection = conexion;
-            try
-            {
-                conexion.Open();
-                return comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                    conexion.Close();
-            }
-        }
-
-        public void setearParametro(string nombre, object valor)
-        {
-            comando.Parameters.AddWithValue(nombre, valor);
-        }
-
         public void cerrarConexion()
         {
-            if (lector != null)
+            if (lector != null && !lector.IsClosed)
                 lector.Close();
-            if (conexion.State == ConnectionState.Open)
+
+            if (conexion.State != System.Data.ConnectionState.Closed)
                 conexion.Close();
         }
 
-        public List<T> ObtenerLista<T>(Func<SqlDataReader, T> mapear)
+        public object ObtenerIdGenerado()
         {
-            var lista = new List<T>();
-            try
-            {
-                ejecutarLectura();
-                while (lector.Read())
-                {
-                    lista.Add(mapear(lector));
-                }
-                return lista;
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-        }
-
-        public int Insertar(string tabla, Dictionary<string, object> parametros)
-        {
-            var campos = string.Join(", ", parametros.Keys);
-            var valores = string.Join(", ", parametros.Keys.Select(k => "@" + k));
-            comando.CommandText = $"INSERT INTO {tabla} ({campos}) VALUES ({valores}); SELECT SCOPE_IDENTITY();";
-            comando.CommandType = CommandType.Text;
-            comando.Parameters.Clear();
-
-            Debug.WriteLine($"Consulta SQL: {comando.CommandText}");
-
-            foreach (var param in parametros)
-            {
-                comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
-            }
+            comando.Connection = conexion;
 
             try
             {
-                comando.Connection = conexion;
-                conexion.Open();
-                var resultado = comando.ExecuteScalar();
-                return resultado != null ? Convert.ToInt32(resultado) : 0;
+                if (conexion.State != System.Data.ConnectionState.Open)
+                    conexion.Open();
+
+                return comando.ExecuteScalar();   // devuelve el ID generado
             }
-            catch (SqlException sqlEx)
+            catch (Exception)
             {
-                throw new Exception($"Error SQL al insertar en {tabla}: {sqlEx.Message}", sqlEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al insertar en {tabla}: {ex.Message}", ex);
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-        }
-
-        public int Actualizar(string tabla, Dictionary<string, object> parametros, string condicion)
-        {
-            var sets = string.Join(", ", parametros.Keys.Select(k => $"{k} = @{k}"));
-            comando.CommandText = $"UPDATE {tabla} SET {sets} WHERE {condicion}";
-            comando.CommandType = CommandType.Text;
-            comando.Parameters.Clear();
-
-            foreach (var param in parametros)
-            {
-                comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
-            }
-
-            try
-            {
-                comando.Connection = conexion;
-                conexion.Open();
-                return comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al actualizar {tabla}: {ex.Message}", ex);
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-        }
-
-        public int Eliminar(string tabla, string condicion, Dictionary<string, object> parametros = null)
-        {
-            comando.CommandText = $"DELETE FROM {tabla} WHERE {condicion}";
-            comando.CommandType = CommandType.Text;
-            comando.Parameters.Clear();
-
-            if (parametros != null)
-            {
-                foreach (var param in parametros)
-                {
-                    comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
-                }
-            }
-
-            try
-            {
-                comando.Connection = conexion;
-                conexion.Open();
-                return comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al eliminar de {tabla}", ex);
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-        }
-
-        public List<T> Listar<T>(string tabla, string condiciones = null, Dictionary<string, object> parametros = null, Func<SqlDataReader, T> mapear = null)
-        {
-            var lista = new List<T>();
-
-            // Construir la consulta SQL
-            string consulta = $"SELECT * FROM {tabla}";
-            if (!string.IsNullOrEmpty(condiciones))
-                consulta += $" WHERE {condiciones}";
-
-            comando.CommandText = consulta;
-            comando.CommandType = CommandType.Text;
-            comando.Parameters.Clear();
-
-            Debug.WriteLine($"Consulta Listar: {consulta}");
-
-            if (parametros != null)
-            {
-                foreach (var param in parametros)
-                {
-                    comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
-                }
-            }
-
-            try
-            {
-                comando.Connection = conexion;
-                conexion.Open();
-
-                using (var reader = comando.ExecuteReader())
-                {
-                    if (mapear != null)
-                    {
-                        while (reader.Read())
-                        {
-                            var item = mapear(reader);
-                            if (item != null)
-                                lista.Add(item);
-                        }
-                    }
-                }
-                Debug.WriteLine($"Registros encontrados: {lista.Count}");
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error en Listar: {ex.Message}");
-                Debug.WriteLine($"StackTrace: {ex.StackTrace}");
-                throw new Exception($"Error al listar {tabla}: {ex.Message}", ex);
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-        }
-
-        public List<KeyValuePair<int, string>> CargarDesplegable(string tabla, string idColumna, string textoColumna, string condiciones = null, Dictionary<string, object> parametros = null)
-        {
-            var lista = new List<KeyValuePair<int, string>>();
-            string query = $"SELECT {idColumna}, {textoColumna} FROM {tabla}";
-
-            if (!string.IsNullOrEmpty(condiciones))
-                query += $" WHERE {condiciones}";
-
-            comando.CommandText = query;
-            comando.CommandType = CommandType.Text;
-            comando.Parameters.Clear();
-
-            if (parametros != null)
-            {
-                foreach (var param in parametros)
-                {
-                    comando.Parameters.AddWithValue("@" + param.Key, param.Value ?? DBNull.Value);
-                }
-            }
-
-            try
-            {
-                comando.Connection = conexion;
-                conexion.Open();
-
-                using (var reader = comando.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        int clave = reader.GetInt32(0);
-                        string texto = reader.GetString(1);
-                        lista.Add(new KeyValuePair<int, string>(clave, texto));
-                    }
-                }
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error al cargar desplegable: {ex.Message}");
                 throw;
             }
             finally
             {
-                cerrarConexion();
-            }
-        }
-
-        public void limpiarParametros()
-        {
-            if (this.comando != null)
-            {
-                this.comando.Parameters.Clear();
-            }
-        }
-
-        public bool ProbarConexion()
-        {
-            try
-            {
-                conexion.Open();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error de conexión: " + ex.Message);
-                return false;
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
+                if (conexion.State == System.Data.ConnectionState.Open)
                     conexion.Close();
             }
-          
         }
-
-
-
-
-
     }
-
-
 }
