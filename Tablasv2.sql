@@ -35,11 +35,11 @@ CREATE TABLE Usuario (
 GO
 
 -- Insert único para Usuario (3 usuarios en un solo INSERT)
-INSERT INTO Usuario (Nombre, Email, Password, Rol)
+INSERT INTO Usuario (Nombre, Email, Password,Telefono, Rol)
 VALUES
-('Carlos Tech', 'carlos@informatica.com', '1234', 'Cliente'),
-('Laura Sistemas', 'laura@sistemas.com', '1234', 'Cliente'),
-('Admin IT', 'admin@informatica.com', 'admin123', 'Admin');
+('Carlos Tech', 'carlos@informatica.com', '1234', '123', 'Cliente'),
+('Laura Sistemas', 'laura@sistemas.com', '1234','456', 'Cliente'),
+('Admin IT', 'admin@informatica.com', 'admin123','789', 'Admin');
 GO
 
 -- Tabla Producto
