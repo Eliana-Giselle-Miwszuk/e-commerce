@@ -68,24 +68,48 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel.aspx" />
+    <Content Include="AgregarEditarDireccion.aspx" />
+    <Content Include="AgregarEditarProducto.aspx" />
     <Content Include="AgregarEditarUsuario.aspx" />
+    <Content Include="Carrito.aspx" />
     <Content Include="Css\bootstrap.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DetallePedido.aspx" />
+    <Content Include="FinalizarPedido.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Gracias.aspx" />
     <Content Include="Js\bootstrap.js" />
     <Content Include="Login.aspx" />
+    <Content Include="MisDirecciones.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPageOLD.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEditarDireccion.aspx.cs">
+      <DependentUpon>AgregarEditarDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarEditarDireccion.aspx.designer.cs">
+      <DependentUpon>AgregarEditarDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEditarProducto.aspx.cs">
+      <DependentUpon>AgregarEditarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarEditarProducto.aspx.designer.cs">
+      <DependentUpon>AgregarEditarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgregarEditarUsuario.aspx.cs">
       <DependentUpon>AgregarEditarUsuario.aspx</DependentUpon>
@@ -94,6 +118,13 @@
     <Compile Include="AgregarEditarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarEditarUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,8 +132,29 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetallePedido.aspx.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallePedido.aspx.designer.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinalizarPedido.aspx.cs">
+      <DependentUpon>FinalizarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinalizarPedido.aspx.designer.cs">
+      <DependentUpon>FinalizarPedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Gracias.aspx.cs">
+      <DependentUpon>Gracias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gracias.aspx.designer.cs">
+      <DependentUpon>Gracias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -117,6 +169,13 @@
     </Compile>
     <Compile Include="MenuWeb.Master.designer.cs">
       <DependentUpon>MenuWeb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MisDirecciones.aspx.cs">
+      <DependentUpon>MisDirecciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisDirecciones.aspx.designer.cs">
+      <DependentUpon>MisDirecciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
