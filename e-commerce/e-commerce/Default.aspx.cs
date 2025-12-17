@@ -41,8 +41,8 @@ namespace e_commerce
             btn.Text = "Agregado ✅";
             btn.Enabled = false;
 
-            // Actualizar badge del MasterPage
-          //  ((MenuWeb)Master).ActualizarCantidadCarrito();
+            // Actualizar el carrito del MasterPage
+            ((MenuWeb)Master).ActualizarCantidadCarrito();
         }
     }
 }
