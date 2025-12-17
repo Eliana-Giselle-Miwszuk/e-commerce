@@ -11,6 +11,7 @@ namespace e_commerce
         protected void Page_Load(object sender, EventArgs e)
         {
             Seguridad.VerificarUsuario("Admin");
+
             if (!IsPostBack)
             {
                 CargarRoles();
@@ -32,7 +33,9 @@ namespace e_commerce
 
         private void CargarUsuario(int id)
         {
-            Usuario u = usuarioNegocio.ListarUsuarios().Find(x => x.IdUsuario == id);
+            Usuario u = usuarioNegocio.ListarUsuarios()
+                                     .Find(x => x.IdUsuario == id);
+
             if (u != null)
             {
                 txtNombre.Text = u.Nombre;
@@ -44,7 +47,8 @@ namespace e_commerce
             }
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        // GUARDA REAL (CONFIRMADO DESDE EL MODAL)
+        protected void btnConfirmarGuardar_Click(object sender, EventArgs e)
         {
             Usuario u = new Usuario
             {

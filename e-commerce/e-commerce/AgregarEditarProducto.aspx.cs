@@ -34,7 +34,9 @@ namespace e_commerce
 
         private void CargarProducto(int id)
         {
-            Producto p = productoNegocio.ListarProductosActivos().Find(x => x.IdProducto == id);
+            Producto p = productoNegocio.ListarProductosActivos()
+                                        .Find(x => x.IdProducto == id);
+
             if (p != null)
             {
                 txtNombre.Text = p.Nombre;
@@ -47,7 +49,8 @@ namespace e_commerce
             }
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        // GUARDA REAL (CONFIRMADO DESDE MODAL)
+        protected void btnConfirmarGuardar_Click(object sender, EventArgs e)
         {
             if (!decimal.TryParse(txtPrecio.Text, out decimal precio) ||
                 !int.TryParse(txtStock.Text, out int stock))

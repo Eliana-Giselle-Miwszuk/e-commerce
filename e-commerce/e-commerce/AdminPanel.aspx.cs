@@ -12,11 +12,12 @@ namespace e_commerce
         ProductoNegocio productoNegocio = new ProductoNegocio();
         PedidoNegocio pedidoNegocio = new PedidoNegocio();
 
+        private const string VS_ID = "EliminarId";
+        private const string VS_TIPO = "EliminarTipo";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
             Seguridad.VerificarUsuario("Admin");
-            //VerificarAdmin();
 
             if (!IsPostBack)
             {
@@ -53,8 +54,15 @@ namespace e_commerce
 
             if (e.CommandName == "Eliminar")
             {
-                usuarioNegocio.EliminarUsuario(id);
-                CargarUsuarios();
+                ViewState[VS_ID] = id;
+                ViewState[VS_TIPO] = "Usuario";
+
+                ScriptManager.RegisterStartupScript(
+                    this, GetType(),
+                    "modalEliminar",
+                    "mostrarModalEliminar();",
+                    true
+                );
             }
         }
 
@@ -107,8 +115,15 @@ namespace e_commerce
 
             if (e.CommandName == "Eliminar")
             {
-                productoNegocio.EliminarProducto(id);
-                CargarProductos();
+                ViewState[VS_ID] = id;
+                ViewState[VS_TIPO] = "Producto";
+
+                ScriptManager.RegisterStartupScript(
+                    this, GetType(),
+                    "modalEliminar",
+                    "mostrarModalEliminar();",
+                    true
+                );
             }
         }
 
@@ -165,7 +180,28 @@ namespace e_commerce
             }
         }
 
+        // ================= CONFIRMAR ELIMINACIÓN =================
+        protected void btnConfirmarEliminar_Click(object sender, EventArgs e)
+        {
+            if (ViewState[VS_ID] == null || ViewState[VS_TIPO] == null)
+                return;
 
+            int id = (int)ViewState[VS_ID];
+            string tipo = ViewState[VS_TIPO].ToString();
 
+            if (tipo == "Usuario")
+            {
+                usuarioNegocio.EliminarUsuario(id);
+                CargarUsuarios();
+            }
+            else if (tipo == "Producto")
+            {
+                productoNegocio.EliminarProducto(id);
+                CargarProductos();
+            }
+
+            ViewState.Remove(VS_ID);
+            ViewState.Remove(VS_TIPO);
+        }
     }
 }

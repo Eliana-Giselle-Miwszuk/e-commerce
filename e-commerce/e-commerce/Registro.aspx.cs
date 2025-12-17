@@ -20,9 +20,10 @@ namespace e_commerce
         {
             string nombre = txtNombre.Text.Trim();
             string email = txtEmail.Text.Trim();
+            string telefono = txtTelefono.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(telefono))
             {
                 lblMensaje.Text = "Todos los campos son obligatorios.";
                 return;
@@ -34,6 +35,7 @@ namespace e_commerce
                 {
                     Nombre = nombre,
                     Email = email,
+                    Telefono = telefono,
                     Password = password,
                     Rol = "Cliente"
                 };
@@ -46,6 +48,7 @@ namespace e_commerce
 
                 txtNombre.Text = "";
                 txtEmail.Text = "";
+                txtTelefono.Text = "";
                 txtPassword.Text = "";
             }
             catch (Exception ex)

@@ -11,26 +11,22 @@
 
 <h2 class="mb-3">Panel de Administración</h2>
 
-<!-- ================= TABS ================= -->
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
         <button type="button" class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#usuarios">
+            data-bs-toggle="tab" data-bs-target="#usuarios">
             Usuarios
         </button>
     </li>
     <li class="nav-item">
         <button type="button" class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#productos">
+            data-bs-toggle="tab" data-bs-target="#productos">
             Productos
         </button>
     </li>
     <li class="nav-item">
         <button type="button" class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#pedidos">
+            data-bs-toggle="tab" data-bs-target="#pedidos">
             Pedidos
         </button>
     </li>
@@ -57,8 +53,8 @@
                     <asp:DropDownList ID="ddlRol" runat="server"
                         AutoPostBack="true"
                         OnSelectedIndexChanged="ddlRol_SelectedIndexChanged">
-                        <asp:ListItem Text="Admin" Value="Admin" />
-                        <asp:ListItem Text="Cliente" Value="Cliente" />
+                        <asp:ListItem Text="Admin" />
+                        <asp:ListItem Text="Cliente" />
                     </asp:DropDownList>
                 </ItemTemplate>
             </asp:TemplateField>
@@ -83,8 +79,7 @@
                     <asp:Button runat="server" Text="Eliminar"
                         CssClass="btn btn-sm btn-danger"
                         CommandName="Eliminar"
-                        CommandArgument='<%# Eval("IdUsuario") %>'
-                        OnClientClick="return confirm('¿Desactivar usuario?');" />
+                        CommandArgument='<%# Eval("IdUsuario") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -94,7 +89,6 @@
         Text="Agregar Usuario"
         CssClass="btn btn-success"
         OnClick="btnAgregarUsuario_Click" />
-
 </div>
 
 <!-- ================= PRODUCTOS ================= -->
@@ -140,48 +134,85 @@
         Text="Agregar Producto"
         CssClass="btn btn-success"
         OnClick="btnAgregarProducto_Click" />
-
 </div>
 
 <!-- ================= PEDIDOS ================= -->
 <div class="tab-pane fade" id="pedidos">
 
-<asp:GridView ID="gvPedidos" runat="server"
-    CssClass="table table-striped"
-    AutoGenerateColumns="False"
-    DataKeyNames="IdPedido"
-    OnRowCommand="gvPedidos_RowCommand"
-    OnRowDataBound="gvPedidos_RowDataBound">
+    <asp:GridView ID="gvPedidos" runat="server"
+        CssClass="table table-striped"
+        AutoGenerateColumns="False"
+        DataKeyNames="IdPedido"
+        OnRowCommand="gvPedidos_RowCommand"
+        OnRowDataBound="gvPedidos_RowDataBound">
 
-    <Columns>
-        <asp:BoundField DataField="IdPedido" HeaderText="Pedido" />
-        <asp:BoundField DataField="NombreUsuario" HeaderText="Cliente" />
-        <asp:BoundField DataField="Total" HeaderText="Total" DataFormatString="{0:C}" />
+        <Columns>
+            <asp:BoundField DataField="IdPedido" HeaderText="Pedido" />
+            <asp:BoundField DataField="NombreUsuario" HeaderText="Cliente" />
+            <asp:BoundField DataField="Total" HeaderText="Total" DataFormatString="{0:C}" />
 
-        <asp:TemplateField HeaderText="Estado">
-            <ItemTemplate>
-                <asp:DropDownList ID="ddlEstadoPedido" runat="server"
-                    AutoPostBack="true"
-                    OnSelectedIndexChanged="ddlEstadoPedido_SelectedIndexChanged">
-                    <asp:ListItem Text="Pendiente" />
-                    <asp:ListItem Text="Pagado" />
-                    <asp:ListItem Text="Enviado" />
-                    <asp:ListItem Text="Cancelado" />
-                </asp:DropDownList>
-            </ItemTemplate>
-        </asp:TemplateField>
+            <asp:TemplateField HeaderText="Estado">
+                <ItemTemplate>
+                    <asp:DropDownList ID="ddlEstadoPedido" runat="server"
+                        AutoPostBack="true"
+                        OnSelectedIndexChanged="ddlEstadoPedido_SelectedIndexChanged">
+                        <asp:ListItem Text="Pendiente" />
+                        <asp:ListItem Text="Pagado" />
+                        <asp:ListItem Text="Enviado" />
+                        <asp:ListItem Text="Cancelado" />
+                    </asp:DropDownList>
+                </ItemTemplate>
+            </asp:TemplateField>
 
-        <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
+            <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
 
-        <asp:ButtonField Text="Ver"
-            ButtonType="Button"
-            CommandName="VerDetalle"
-            ControlStyle-CssClass="btn btn-sm btn-info" />
-    </Columns>
-</asp:GridView>
-
+            <asp:ButtonField Text="Ver"
+                ButtonType="Button"
+                CommandName="VerDetalle"
+                ControlStyle-CssClass="btn btn-sm btn-info" />
+        </Columns>
+    </asp:GridView>
 </div>
 
 </div>
+
+<!-- ================= MODAL ELIMINAR ================= -->
+<div class="modal fade" id="modalEliminar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmar eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar este registro?
+            </div>
+
+            <div class="modal-footer">
+                <asp:Button ID="btnConfirmarEliminar"
+                    runat="server"
+                    Text="Sí, eliminar"
+                    CssClass="btn btn-danger"
+                    OnClick="btnConfirmarEliminar_Click" />
+
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarModalEliminar() {
+        var modal = new bootstrap.Modal(document.getElementById('modalEliminar'));
+        modal.show();
+    }
+</script>
 
 </asp:Content>

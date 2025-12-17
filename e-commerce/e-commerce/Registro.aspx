@@ -14,7 +14,7 @@
         <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
             <h2 class="text-center mb-4">Registro de Usuario</h2>
 
-            <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger text-center d-block mb-3"></asp:Label>
+            <asp:Label ID="lblMensaje" runat="server" CssClass="text-center d-block mb-3"></asp:Label>
 
             <div class="mb-3">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre" CssClass="form-label"></asp:Label>
@@ -25,7 +25,10 @@
                 <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="form-label"></asp:Label>
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="ejemplo@correo.com"></asp:TextBox>
             </div>
-
+            <div class="mb-3">
+                <asp:Label ID="lblTelefono" runat="server" Text="Telefono" CssClass="form-label"></asp:Label>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" Placeholder="+54 4123 4564"></asp:TextBox>
+            </div>
             <div class="mb-3">
                 <asp:Label ID="lblPassword" runat="server" Text="Contraseña" CssClass="form-label"></asp:Label>
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" Placeholder="••••••"></asp:TextBox>
