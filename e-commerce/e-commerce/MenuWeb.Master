@@ -131,7 +131,7 @@
                                 <a class="nav-link" href="Perfil.aspx">Mi Perfil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" id="lnkLogout" runat="server" onserverclick="CerrarSesion_Click">Logout</a>
+                                <a class="nav-link" href="#" id="lnkLogout" runat="server" onserverclick="CerrarSesion_ServerClick">Logout</a>
                             </li>
                         </asp:PlaceHolder>
 
