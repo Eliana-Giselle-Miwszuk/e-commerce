@@ -32,6 +32,7 @@ namespace e_commerce
             lblFecha.Text = p.Fecha.ToString("dd/MM/yyyy");
             lblEstado.Text = p.Estado;
             lblTotal.Text = p.Total.ToString("C");
+
         }
 
         private void CargarDetalle(int idPedido)

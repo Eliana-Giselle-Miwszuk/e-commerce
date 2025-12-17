@@ -1,7 +1,9 @@
 USE EcommerceDB;
 GO
 
--- Tabla Categoria
+/* =========================
+   TABLA CATEGORIA
+========================= */
 CREATE TABLE Categoria (
     IdCategoria INT IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
@@ -10,39 +12,39 @@ CREATE TABLE Categoria (
 );
 GO
 
--- Insert único para Categoria (7 categorías en un solo INSERT)
-INSERT INTO Categoria (Nombre, Descripcion)
-VALUES
-('Hardware', 'Componentes físicos de computadoras'),
-('Periféricos', 'Dispositivos de entrada y salida'),
-('Almacenamiento', 'Discos y memorias'),
-('Redes', 'Equipos y accesorios de red'),
-('Electrónica', 'Productos electrónicos y tecnología'),
-('Hogar', 'Artículos para el hogar'),
-('Indumentaria', 'Ropa y accesorios');
-GO
-
--- Tabla Usuario
+/* =========================
+   TABLA USUARIO
+========================= */
 CREATE TABLE Usuario (
     IdUsuario INT IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
     Email VARCHAR(150) NOT NULL UNIQUE,
     Password VARCHAR(255) NOT NULL,
     Rol VARCHAR(20) NOT NULL,
-	Telefono VARCHAR(20) NOT NULL,
+    Telefono VARCHAR(20) NOT NULL,
     Activo BIT NOT NULL DEFAULT 1
 );
 GO
 
--- Insert único para Usuario (3 usuarios en un solo INSERT)
-INSERT INTO Usuario (Nombre, Email, Password,Telefono, Rol)
-VALUES
-('Carlos Tech', 'carlos@informatica.com', '1234', '123', 'Cliente'),
-('Laura Sistemas', 'laura@sistemas.com', '1234','456', 'Cliente'),
-('Admin IT', 'admin@informatica.com', 'admin123','789', 'Admin');
+/* =========================
+   TABLA DIRECCION
+========================= */
+CREATE TABLE Direccion (
+    IdDireccion INT IDENTITY(1,1) PRIMARY KEY,
+    IdUsuario INT NOT NULL,
+    Calle VARCHAR(150) NOT NULL,
+    Numero VARCHAR(20) NOT NULL,
+    Localidad VARCHAR(100) NOT NULL,
+    CodigoPostal VARCHAR(10) NOT NULL,
+    Observaciones VARCHAR(255),
+    CONSTRAINT FK_Direccion_Usuario
+        FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario)
+);
 GO
 
--- Tabla Producto
+/* =========================
+   TABLA PRODUCTO
+========================= */
 CREATE TABLE Producto (
     IdProducto INT IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(150) NOT NULL,
@@ -57,36 +59,52 @@ CREATE TABLE Producto (
 );
 GO
 
--- Insert único para Producto (6 productos en un solo INSERT)
-INSERT INTO Producto (Nombre, Descripcion, Precio, Stock, ImagenUrl, IdCategoria)
-VALUES
-('Mouse Gamer Logitech G203', 'Mouse óptico 8000 DPI RGB', 18500.00, 25, 'mouse_g203.jpg', 2),
-('Teclado Mecánico Redragon Kumara', 'Teclado mecánico switch blue', 42000.00, 15, 'teclado_kumara.jpg', 2),
-('Disco SSD Kingston 480GB', 'SSD SATA III 480GB', 52000.00, 20, 'ssd_kingston_480.jpg', 3),
-('Memoria RAM Corsair 16GB DDR4', 'Memoria DDR4 3200MHz', 68000.00, 10, 'ram_corsair_16gb.jpg', 1),
-('Router TP-Link Archer C6', 'Router WiFi AC1200', 75000.00, 8, 'router_archer_c6.jpg', 4),
-('Placa de Video NVIDIA RTX 3060', 'GPU 12GB GDDR6', 420000.00, 4, 'rtx_3060.jpg', 1);
+/* =========================
+   TABLA FORMA DE PAGO
+========================= */
+CREATE TABLE FormaPago (
+    IdFormaPago INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Descripcion VARCHAR(255)
+);
 GO
 
--- Tabla Pedido
+/* =========================
+   TABLA FORMA DE ENTREGA
+========================= */
+CREATE TABLE FormaEntrega (
+    IdFormaEntrega INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Descripcion VARCHAR(255)
+);
+GO
+
+/* =========================
+   TABLA PEDIDO
+========================= */
 CREATE TABLE Pedido (
     IdPedido INT IDENTITY(1,1) PRIMARY KEY,
     Fecha DATETIME NOT NULL DEFAULT GETDATE(),
     Total DECIMAL(10,2) NOT NULL,
     Estado VARCHAR(30) NOT NULL,
     IdUsuario INT NOT NULL,
+    IdDireccionEntrega INT NULL,
+    IdFormaPago INT NULL,
+    IdFormaEntrega INT NULL,
     CONSTRAINT FK_Pedido_Usuario
-        FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario)
+        FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario),
+    CONSTRAINT FK_Pedido_Direccion
+        FOREIGN KEY (IdDireccionEntrega) REFERENCES Direccion(IdDireccion),
+    CONSTRAINT FK_Pedido_FormaPago
+        FOREIGN KEY (IdFormaPago) REFERENCES FormaPago(IdFormaPago),
+    CONSTRAINT FK_Pedido_FormaEntrega
+        FOREIGN KEY (IdFormaEntrega) REFERENCES FormaEntrega(IdFormaEntrega)
 );
 GO
 
--- Insert único para Pedido
-INSERT INTO Pedido (Total, Estado, IdUsuario)
-VALUES
-(60500.00, 'Pendiente', 1);
-GO
-
--- Tabla DetallePedido
+/* =========================
+   TABLA DETALLE PEDIDO
+========================= */
 CREATE TABLE DetallePedido (
     IdDetallePedido INT IDENTITY(1,1) PRIMARY KEY,
     IdPedido INT NOT NULL,
@@ -100,65 +118,42 @@ CREATE TABLE DetallePedido (
 );
 GO
 
--- Insert único para DetallePedido (2 detalles en un solo INSERT)
-INSERT INTO DetallePedido (IdPedido, IdProducto, Cantidad, PrecioUnitario)
-VALUES
-(1, 1, 1, 18500.00),
-(1, 3, 1, 52000.00);
+/* =========================
+   DATOS DE PRUEBA
+========================= */
+
+INSERT INTO Categoria (Nombre, Descripcion) VALUES
+('Hardware', 'Componentes físicos de computadoras'),
+('Periféricos', 'Dispositivos de entrada y salida'),
+('Almacenamiento', 'Discos y memorias'),
+('Redes', 'Equipos y accesorios de red'),
+('Electrónica', 'Productos electrónicos y tecnología'),
+('Hogar', 'Artículos para el hogar'),
+('Indumentaria', 'Ropa y accesorios');
 GO
 
--- Tabla Direccion
-CREATE TABLE Direccion (
-    IdDireccion INT IDENTITY(1,1) PRIMARY KEY,
-    IdUsuario INT NOT NULL,
-    Calle VARCHAR(150) NOT NULL,
-    Numero VARCHAR(20) NOT NULL,
-    Localidad VARCHAR(100) NOT NULL,
-    CodigoPostal VARCHAR(10) NOT NULL,
-    Observaciones VARCHAR(255),
-    CONSTRAINT FK_Direccion_Usuario
-        FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario)
-);
-GO
--- Tabla Forma de pago
-CREATE TABLE FormaPago (
-    IdFormaPago INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Descripcion VARCHAR(255)
-);
+INSERT INTO Usuario (Nombre, Email, Password, Telefono, Rol) VALUES
+('Carlos Tech', 'carlos@informatica.com', '1234', '123', 'Cliente'),
+('Laura Sistemas', 'laura@sistemas.com', '1234', '456', 'Cliente'),
+('Admin IT', 'admin@informatica.com', 'admin123', '789', 'Admin');
 GO
 
--- Ejemplos
-INSERT INTO FormaPago (Nombre, Descripcion)
-VALUES
+INSERT INTO FormaPago (Nombre, Descripcion) VALUES
 ('Tarjeta de Crédito', 'Pago con tarjeta de crédito'),
 ('Transferencia Bancaria', 'Pago mediante transferencia bancaria'),
 ('MercadoPago', 'Pago online seguro');
 GO
 
--- Tabla Forma de entrega
-CREATE TABLE FormaEntrega (
-    IdFormaEntrega INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Descripcion VARCHAR(255)
-);
-GO
-
--- Ejemplos
-INSERT INTO FormaEntrega (Nombre, Descripcion)
-VALUES
+INSERT INTO FormaEntrega (Nombre, Descripcion) VALUES
 ('Retiro en local', 'Retiro del producto en la tienda física'),
 ('Envío a domicilio', 'Entrega a domicilio mediante mensajería');
 GO
 
--- Ajuste en la tabla Pedido
-ALTER TABLE Pedido
-ADD IdFormaPago INT NULL,
-    IdFormaEntrega INT NULL,
-    IdDireccionEntrega INT NULL,
-    CONSTRAINT FK_Pedido_FormaPago FOREIGN KEY (IdFormaPago) REFERENCES FormaPago(IdFormaPago),
-    CONSTRAINT FK_Pedido_FormaEntrega FOREIGN KEY (IdFormaEntrega) REFERENCES FormaEntrega(IdFormaEntrega),
-    CONSTRAINT FK_Pedido_DireccionEntrega FOREIGN KEY (IdDireccionEntrega) REFERENCES Direccion(IdDireccion);
+INSERT INTO Producto (Nombre, Descripcion, Precio, Stock, ImagenUrl, IdCategoria) VALUES
+('Mouse Gamer Logitech G203', 'Mouse óptico 8000 DPI RGB', 18500, 25, 'mouse_g203.jpg', 2),
+('Teclado Mecánico Redragon Kumara', 'Teclado mecánico switch blue', 42000, 15, 'teclado_kumara.jpg', 2),
+('Disco SSD Kingston 480GB', 'SSD SATA III 480GB', 52000, 20, 'ssd_kingston_480.jpg', 3),
+('Memoria RAM Corsair 16GB DDR4', 'Memoria DDR4 3200MHz', 68000, 10, 'ram_corsair_16gb.jpg', 1),
+('Router TP-Link Archer C6', 'Router WiFi AC1200', 75000, 8, 'router_archer_c6.jpg', 4),
+('Placa de Video NVIDIA RTX 3060', 'GPU 12GB GDDR6', 420000, 4, 'rtx_3060.jpg', 1);
 GO
-
-

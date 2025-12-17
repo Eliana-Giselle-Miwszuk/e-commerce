@@ -180,9 +180,9 @@ namespace Negocio
                 D.Localidad,
                 D.CodigoPostal
             FROM Pedido P
-            INNER JOIN Usuario U ON U.IdUsuario = P.IdUsuario
-            INNER JOIN Direccion D ON D.IdDireccion = P.IdDireccionEntrega
-            WHERE P.IdPedido = @id");
+                INNER JOIN Usuario U ON U.IdUsuario = P.IdUsuario
+                LEFT JOIN Direccion D ON D.IdDireccion = P.IdDireccionEntrega
+                WHERE P.IdPedido = @id");
 
                 datos.setearParametro("@id", idPedido);
                 datos.ejecutarLectura();
@@ -198,11 +198,13 @@ namespace Negocio
                         NombreUsuario = datos.Lector["NombreUsuario"].ToString(),
                         Email = datos.Lector["Email"].ToString(),
                         Telefono = datos.Lector["Telefono"].ToString(),
-                        Calle = datos.Lector["Calle"].ToString(),
-                        Numero = datos.Lector["Numero"].ToString(),
-                        Localidad = datos.Lector["Localidad"].ToString(),
-                        CodigoPostal = datos.Lector["CodigoPostal"].ToString()
+
+                        Calle = datos.Lector["Calle"] == DBNull.Value ? "" : datos.Lector["Calle"].ToString(),
+                        Numero = datos.Lector["Numero"] == DBNull.Value ? "" : datos.Lector["Numero"].ToString(),
+                        Localidad = datos.Lector["Localidad"] == DBNull.Value ? "" : datos.Lector["Localidad"].ToString(),
+                        CodigoPostal = datos.Lector["CodigoPostal"] == DBNull.Value ? "" : datos.Lector["CodigoPostal"].ToString()
                     };
+
                 }
 
                 return null;
