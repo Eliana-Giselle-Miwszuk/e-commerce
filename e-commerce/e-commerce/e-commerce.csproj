@@ -68,8 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\bootstrap.css" />
-    <Content Include="DashboardAdmin\Default.aspx" />
-    <Content Include="DashboardAdmin\Direcciones\Direcciones.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Js\bootstrap.js" />
@@ -77,27 +75,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardAdmin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DashboardAdmin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DashboardAdmin\Direcciones\Direcciones.aspx.cs">
-      <DependentUpon>Direcciones.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DashboardAdmin\Direcciones\Direcciones.aspx.designer.cs">
-      <DependentUpon>Direcciones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DashboardAdmin\MenuAdmin.Master.cs">
-      <DependentUpon>MenuAdmin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DashboardAdmin\MenuAdmin.Master.designer.cs">
-      <DependentUpon>MenuAdmin.Master</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MenuWeb.Master" />
-    <Content Include="DashboardAdmin\MenuAdmin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -137,8 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DashboardAdmin\Productos\" />
-    <Folder Include="DashboardAdmin\Usuarios\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
