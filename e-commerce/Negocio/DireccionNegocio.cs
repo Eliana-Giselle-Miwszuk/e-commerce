@@ -115,5 +115,29 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public bool TienePedidosAsociados(int idDireccion)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM Pedido WHERE IdDireccionEntrega = @IdDireccion");
+                datos.setearParametro("@IdDireccion", idDireccion);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    int count = (int)datos.Lector[0];
+                    return count > 0;
+                }
+
+                return false;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

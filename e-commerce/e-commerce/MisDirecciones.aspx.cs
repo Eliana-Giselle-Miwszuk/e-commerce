@@ -1,20 +1,20 @@
-﻿using Negocio;
+﻿using Dominio;
+using Negocio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Dominio;
 
 namespace e_commerce
 {
-    public partial class MisDirecciones : System.Web.UI.Page
+    public partial class MisDirecciones : Page
     {
         private DireccionNegocio direccionNegocio = new DireccionNegocio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Seguridad.VerificarUsuario("Cliente", "Admin");
+
             if (!IsPostBack)
             {
                 CargarDirecciones();
@@ -24,12 +24,6 @@ namespace e_commerce
         private void CargarDirecciones()
         {
             Usuario usuario = Session["Usuario"] as Usuario;
-            if (usuario == null)
-            {
-                Response.Redirect("Login.aspx");
-                return;
-            }
-
             List<Direccion> lista = direccionNegocio.ListarDireccionesPorUsuario(usuario.IdUsuario);
             gvDirecciones.DataSource = lista;
             gvDirecciones.DataBind();
@@ -43,10 +37,31 @@ namespace e_commerce
             {
                 Response.Redirect("AgregarEditarDireccion.aspx?id=" + idDireccion);
             }
-            else if (e.CommandName == "Eliminar")
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarEditarDireccion.aspx");
+        }
+
+        protected void btnConfirmarEliminar_Click(object sender, EventArgs e)
+        {
+            int idDireccion;
+            if (int.TryParse(hfEliminarId.Value, out idDireccion))
             {
                 try
                 {
+                    // Verificar si la dirección tiene pedidos asociados
+                    bool enUso = direccionNegocio.TienePedidosAsociados(idDireccion);
+                    if (enUso)
+                    {
+                        lblMensaje.Visible = true;
+                        lblMensaje.CssClass = "alert alert-warning";
+                        lblMensaje.Text = "No se puede eliminar esta dirección porque está asociada a un pedido.";
+                        return;
+                    }
+
+                    // Si no tiene pedidos, se elimina
                     direccionNegocio.EliminarDireccion(idDireccion);
 
                     lblMensaje.Visible = true;
@@ -64,9 +79,8 @@ namespace e_commerce
             }
         }
 
-        protected void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarEditarDireccion.aspx");
-        }
+
+
+
     }
 }

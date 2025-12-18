@@ -63,7 +63,7 @@ namespace e_commerce
             if (Request.QueryString["id"] != null)
             {
                 u.IdUsuario = Convert.ToInt32(Request.QueryString["id"]);
-                usuarioNegocio.ActualizarUsuarioCompleto(u);
+                usuarioNegocio.ActualizarUsuario(u);
             }
             else
             {

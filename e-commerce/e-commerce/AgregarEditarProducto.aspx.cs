@@ -1,6 +1,7 @@
 ﻿using System;
 using Dominio;
 using Negocio;
+using System.Web;
 
 namespace e_commerce
 {
@@ -10,6 +11,7 @@ namespace e_commerce
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Verificar que el usuario esté logueado y sea Admin
             Seguridad.VerificarUsuario("Admin");
 
             if (!IsPostBack)
@@ -18,8 +20,10 @@ namespace e_commerce
 
                 if (Request.QueryString["id"] != null)
                 {
-                    int idProducto = Convert.ToInt32(Request.QueryString["id"]);
-                    CargarProducto(idProducto);
+                    if (int.TryParse(Request.QueryString["id"], out int idProducto))
+                        CargarProducto(idProducto);
+                    else
+                        Response.Redirect("AdminPanel.aspx");
                 }
             }
         }
@@ -49,7 +53,6 @@ namespace e_commerce
             }
         }
 
-        // GUARDA REAL (CONFIRMADO DESDE MODAL)
         protected void btnConfirmarGuardar_Click(object sender, EventArgs e)
         {
             if (!decimal.TryParse(txtPrecio.Text, out decimal precio) ||

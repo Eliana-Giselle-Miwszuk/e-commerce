@@ -73,7 +73,7 @@ namespace e_commerce
             if (usuarioActual != null && u.IdUsuario == usuarioActual.IdUsuario) return;
 
             u.Activo = ((CheckBox)sender).Checked;
-            usuarioNegocio.ActualizarUsuarioCompleto(u);
+            usuarioNegocio.ActualizarUsuario(u);
         }
 
         protected void ddlRol_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace e_commerce
             if (usuarioActual != null && u.IdUsuario == usuarioActual.IdUsuario) return;
 
             u.Rol = ((DropDownList)sender).SelectedValue;
-            usuarioNegocio.ActualizarUsuarioCompleto(u);
+            usuarioNegocio.ActualizarUsuario(u);
         }
 
         // ================= PRODUCTOS =================

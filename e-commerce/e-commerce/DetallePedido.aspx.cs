@@ -1,23 +1,32 @@
-﻿using System;
+﻿using Dominio;
 using Negocio;
-using Dominio;
+using System;
+using System.Web;
+using System.Web.UI;
 
 namespace e_commerce
 {
-    public partial class DetallePedido : AdminPageOLD
+    public partial class DetallePedido : Page
     {
         PedidoNegocio pedidoNegocio = new PedidoNegocio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Verificar que el usuario esté logueado y sea Admin
             Seguridad.VerificarUsuario("Admin");
 
             if (!IsPostBack)
             {
-                int idPedido = int.Parse(Request.QueryString["id"]);
-                CargarInfoPedido(idPedido);
-                CargarDetalle(idPedido);
+                if (int.TryParse(Request.QueryString["id"], out int idPedido))
+                {
+                    CargarInfoPedido(idPedido);
+                    CargarDetalle(idPedido);
+                }
+                else
+                {
+                    // Si no hay id válido, redirigir al listado
+                    Response.Redirect("AdminPanel.aspx");
+                }
             }
         }
 
@@ -32,7 +41,6 @@ namespace e_commerce
             lblFecha.Text = p.Fecha.ToString("dd/MM/yyyy");
             lblEstado.Text = p.Estado;
             lblTotal.Text = p.Total.ToString("C");
-
         }
 
         private void CargarDetalle(int idPedido)

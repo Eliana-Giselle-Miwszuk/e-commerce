@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-
 using Dominio;
 using Negocio;
 
@@ -29,8 +24,17 @@ namespace e_commerce
                 return;
             }
 
+            UsuarioNegocio negocio = new UsuarioNegocio();
+
             try
             {
+                // Verificar si el email ya existe
+                if (negocio.ExisteEmail(email))
+                {
+                    lblMensaje.Text = "El email ya está registrado. Intente con otro.";
+                    return;
+                }
+
                 Usuario usuario = new Usuario
                 {
                     Nombre = nombre,
@@ -40,7 +44,6 @@ namespace e_commerce
                     Rol = "Cliente"
                 };
 
-                UsuarioNegocio negocio = new UsuarioNegocio();
                 negocio.RegistrarUsuario(usuario);
 
                 lblMensaje.ForeColor = System.Drawing.Color.Green;

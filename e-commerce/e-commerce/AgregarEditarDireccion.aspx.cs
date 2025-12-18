@@ -1,45 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
 
 namespace e_commerce
 {
-    public partial class AgregarEditarDireccion : System.Web.UI.Page
+    public partial class AgregarEditarDireccion : Page
     {
         private DireccionNegocio direccionNegocio = new DireccionNegocio();
         private int idDireccion = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Ya no hay seguridad aquí
 
-            Seguridad.VerificarUsuario("Admin");
             if (!IsPostBack)
             {
-                Usuario usuario = Session["Usuario"] as Usuario;
-                if (usuario == null)
-                {
-                    Response.Redirect("Login.aspx");
-                    return;
-                }
+                var usuario = HttpContext.Current.Session["Usuario"] as Usuario;
 
-                if (Request.QueryString["id"] != null)
+                if (Request.QueryString["id"] != null && usuario != null)
                 {
+                    // Estamos editando
                     idDireccion = Convert.ToInt32(Request.QueryString["id"]);
                     ltTitulo.Text = "Editar Dirección";
-                    CargarDatos(idDireccion);
+                    CargarDireccion(idDireccion, usuario);
+                }
+                else
+                {
+                    // Estamos agregando
+                    ltTitulo.Text = "Agregar Dirección";
+                    // Formulario vacío
                 }
             }
         }
 
-        private void CargarDatos(int id)
+        private void CargarDireccion(int id, Usuario usuario)
         {
-            Usuario usuario = Session["Usuario"] as Usuario;
-            var direccion = direccionNegocio.ListarDireccionesPorUsuario(usuario.IdUsuario).Find(d => d.IdDireccion == id);
+            var direccion = direccionNegocio
+                .ListarDireccionesPorUsuario(usuario.IdUsuario)
+                .Find(d => d.IdDireccion == id);
+
             if (direccion != null)
             {
                 txtCalle.Text = direccion.Calle;
@@ -54,10 +55,28 @@ namespace e_commerce
             }
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected void btnConfirmarGuardar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = Session["Usuario"] as Usuario;
-            if (usuario == null) Response.Redirect("Login.aspx");
+            var usuario = HttpContext.Current.Session["Usuario"] as Usuario;
+            if (usuario == null)
+            {
+                // Si no hay usuario en sesión, redirigir al login
+                Response.Redirect("Login.aspx");
+                return;
+            }
+
+            lblMensaje.Text = "";
+            lblMensaje.CssClass = "text-danger";
+
+            // Validar campos obligatorios
+            if (string.IsNullOrWhiteSpace(txtCalle.Text) ||
+                string.IsNullOrWhiteSpace(txtNumero.Text) ||
+                string.IsNullOrWhiteSpace(txtLocalidad.Text) ||
+                string.IsNullOrWhiteSpace(txtCodigoPostal.Text))
+            {
+                lblMensaje.Text = "Por favor complete todos los campos obligatorios.";
+                return;
+            }
 
             Direccion direccion = new Direccion
             {
@@ -81,7 +100,11 @@ namespace e_commerce
                     direccionNegocio.AgregarDireccion(direccion);
                 }
 
-                Response.Redirect("MisDirecciones.aspx");
+                lblMensaje.CssClass = "text-success";
+                lblMensaje.Text = "Dirección guardada correctamente.";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "redirect",
+                    "setTimeout(function(){ window.location='MisDirecciones.aspx'; }, 1000);", true);
             }
             catch (Exception ex)
             {

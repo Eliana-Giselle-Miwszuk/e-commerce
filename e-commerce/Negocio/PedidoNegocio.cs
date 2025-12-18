@@ -21,7 +21,7 @@ namespace Negocio
 
             try
             {
-            
+
                 datos.setearConsulta(@"
                     INSERT INTO Pedido (Total, Estado, IdUsuario, IdDireccionEntrega, IdFormaEntrega)
                     VALUES (@Total, 'Pendiente', @IdUsuario, @IdDireccionEntrega, @IdFormaEntrega);
@@ -41,11 +41,11 @@ namespace Negocio
                     if (producto == null)
                         throw new Exception("Producto no encontrado.");
 
-                   
+
                     if (producto.Stock < item.Cantidad)
                         throw new Exception($"Stock insuficiente para {producto.Nombre}");
 
-                
+
                     producto.Stock -= item.Cantidad;
                     productoNegocio.ActualizarProducto(producto);
 

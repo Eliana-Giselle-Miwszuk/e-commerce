@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\e-commercev2listo parasubir\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\e-commercev2listo parasubir\\e-commerce\\e-commerce\\e-commerce\\detallepedido.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\detallepedido.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\e-commercev2listo parasubir\\e-commerce\\e-commerce\\e-commerce\\misdirecciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\misdirecciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\misdirecciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\misdirecciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MenuWeb.Master",
-              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
-              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
-              "ToolTip": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
-              "RelativeToolTip": "e-commerce\\MenuWeb.Master",
+              "Title": "DetallePedido.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\DetallePedido.aspx.cs",
+              "RelativeDocumentMoniker": "e-commerce\\DetallePedido.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\DetallePedido.aspx.cs",
+              "RelativeToolTip": "e-commerce\\DetallePedido.aspx.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T02:07:55.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MisDirecciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MisDirecciones.aspx.cs",
+              "RelativeDocumentMoniker": "e-commerce\\MisDirecciones.aspx.cs",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MisDirecciones.aspx.cs",
+              "RelativeToolTip": "e-commerce\\MisDirecciones.aspx.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAYwE4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T02:06:07.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MisDirecciones.aspx",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MisDirecciones.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\MisDirecciones.aspx",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MisDirecciones.aspx",
+              "RelativeToolTip": "e-commerce\\MisDirecciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-12-18T00:21:54.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T02:05:46.296Z"
             }
           ]
         }
