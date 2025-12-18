@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
@@ -6,7 +7,7 @@ using Negocio;
 
 namespace e_commerce
 {
-    public partial class AdminPanel : AdminPageOLD
+    public partial class AdminPanel : Page
     {
         UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
         ProductoNegocio productoNegocio = new ProductoNegocio();
@@ -17,6 +18,7 @@ namespace e_commerce
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Verificar que el usuario esté logueado y sea Admin
             Seguridad.VerificarUsuario("Admin");
 
             if (!IsPostBack)
@@ -39,7 +41,6 @@ namespace e_commerce
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 Usuario u = (Usuario)e.Row.DataItem;
-
                 ((DropDownList)e.Row.FindControl("ddlRol")).SelectedValue = u.Rol;
                 ((CheckBox)e.Row.FindControl("chkActivo")).Checked = u.Activo;
             }
@@ -56,30 +57,20 @@ namespace e_commerce
             {
                 ViewState[VS_ID] = id;
                 ViewState[VS_TIPO] = "Usuario";
-
-                ScriptManager.RegisterStartupScript(
-                    this, GetType(),
-                    "modalEliminar",
-                    "mostrarModalEliminar();",
-                    true
-                );
+                ScriptManager.RegisterStartupScript(this, GetType(), "modalEliminar", "mostrarModalEliminar();", true);
             }
         }
 
-        protected void btnAgregarUsuario_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarEditarUsuario.aspx");
-        }
+        protected void btnAgregarUsuario_Click(object sender, EventArgs e) => Response.Redirect("AgregarEditarUsuario.aspx");
 
         protected void chkActivo_CheckedChanged(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((CheckBox)sender).NamingContainer;
             int id = (int)gvUsuarios.DataKeys[row.RowIndex].Value;
-
             Usuario u = usuarioNegocio.ObtenerUsuarioPorId(id);
 
-            if (UsuarioActual != null && u.IdUsuario == UsuarioActual.IdUsuario)
-                return;
+            var usuarioActual = HttpContext.Current.Session["Usuario"] as Usuario;
+            if (usuarioActual != null && u.IdUsuario == usuarioActual.IdUsuario) return;
 
             u.Activo = ((CheckBox)sender).Checked;
             usuarioNegocio.ActualizarUsuarioCompleto(u);
@@ -89,11 +80,10 @@ namespace e_commerce
         {
             GridViewRow row = (GridViewRow)((DropDownList)sender).NamingContainer;
             int id = (int)gvUsuarios.DataKeys[row.RowIndex].Value;
-
             Usuario u = usuarioNegocio.ObtenerUsuarioPorId(id);
 
-            if (UsuarioActual != null && u.IdUsuario == UsuarioActual.IdUsuario)
-                return;
+            var usuarioActual = HttpContext.Current.Session["Usuario"] as Usuario;
+            if (usuarioActual != null && u.IdUsuario == usuarioActual.IdUsuario) return;
 
             u.Rol = ((DropDownList)sender).SelectedValue;
             usuarioNegocio.ActualizarUsuarioCompleto(u);
@@ -104,6 +94,26 @@ namespace e_commerce
         {
             gvProductos.DataSource = productoNegocio.ListarProductosActivos();
             gvProductos.DataBind();
+        }
+
+        protected void gvProductos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Producto p = (Producto)e.Row.DataItem;
+                CheckBox chk = (CheckBox)e.Row.FindControl("chkActivoProd");
+                if (chk != null)
+                    chk.Checked = p.Activo;
+            }
+        }
+
+        protected void chkActivoProd_CheckedChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = (GridViewRow)((CheckBox)sender).NamingContainer;
+            int id = (int)gvProductos.DataKeys[row.RowIndex].Value;
+            Producto p = productoNegocio.ObtenerProductoPorId(id);
+            p.Activo = ((CheckBox)sender).Checked;
+            productoNegocio.ActualizarProducto(p);
         }
 
         protected void gvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -117,31 +127,11 @@ namespace e_commerce
             {
                 ViewState[VS_ID] = id;
                 ViewState[VS_TIPO] = "Producto";
-
-                ScriptManager.RegisterStartupScript(
-                    this, GetType(),
-                    "modalEliminar",
-                    "mostrarModalEliminar();",
-                    true
-                );
+                ScriptManager.RegisterStartupScript(this, GetType(), "modalEliminar", "mostrarModalEliminar();", true);
             }
         }
 
-        protected void btnAgregarProducto_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarEditarProducto.aspx");
-        }
-
-        protected void chkActivoProd_CheckedChanged(object sender, EventArgs e)
-        {
-            GridViewRow row = (GridViewRow)((CheckBox)sender).NamingContainer;
-            int id = (int)gvProductos.DataKeys[row.RowIndex].Value;
-
-            Producto p = productoNegocio.ObtenerProductoPorId(id);
-            p.Activo = ((CheckBox)sender).Checked;
-
-            productoNegocio.ActualizarProducto(p);
-        }
+        protected void btnAgregarProducto_Click(object sender, EventArgs e) => Response.Redirect("AgregarEditarProducto.aspx");
 
         // ================= PEDIDOS =================
         private void CargarPedidos()
@@ -156,7 +146,7 @@ namespace e_commerce
             {
                 dynamic pedido = e.Row.DataItem;
                 DropDownList ddl = (DropDownList)e.Row.FindControl("ddlEstadoPedido");
-                ddl.SelectedValue = pedido.Estado;
+                if (ddl != null) ddl.SelectedValue = pedido.Estado;
             }
         }
 
@@ -164,7 +154,6 @@ namespace e_commerce
         {
             GridViewRow row = (GridViewRow)((DropDownList)sender).NamingContainer;
             int idPedido = (int)gvPedidos.DataKeys[row.RowIndex].Value;
-
             string nuevoEstado = ((DropDownList)sender).SelectedValue;
             pedidoNegocio.ActualizarEstadoPedido(idPedido, nuevoEstado);
         }
@@ -175,7 +164,6 @@ namespace e_commerce
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 int idPedido = (int)gvPedidos.DataKeys[index].Value;
-
                 Response.Redirect("DetallePedido.aspx?id=" + idPedido);
             }
         }
@@ -183,8 +171,7 @@ namespace e_commerce
         // ================= CONFIRMAR ELIMINACIÓN =================
         protected void btnConfirmarEliminar_Click(object sender, EventArgs e)
         {
-            if (ViewState[VS_ID] == null || ViewState[VS_TIPO] == null)
-                return;
+            if (ViewState[VS_ID] == null || ViewState[VS_TIPO] == null) return;
 
             int id = (int)ViewState[VS_ID];
             string tipo = ViewState[VS_TIPO].ToString();

@@ -15,15 +15,6 @@ namespace e_commerce
     {
 
         /// <summary>
-        /// Control gvUsuarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsuarios;
-
-        /// <summary>
         /// Control btnAgregarUsuario.
         /// </summary>
         /// <remarks>
@@ -33,13 +24,13 @@ namespace e_commerce
         protected global::System.Web.UI.WebControls.Button btnAgregarUsuario;
 
         /// <summary>
-        /// Control gvProductos.
+        /// Control gvUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvProductos;
+        protected global::System.Web.UI.WebControls.GridView gvUsuarios;
 
         /// <summary>
         /// Control btnAgregarProducto.
@@ -49,6 +40,15 @@ namespace e_commerce
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregarProducto;
+
+        /// <summary>
+        /// Control gvProductos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvProductos;
 
         /// <summary>
         /// Control gvPedidos.

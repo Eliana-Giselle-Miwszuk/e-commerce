@@ -34,145 +34,138 @@
 
 <div class="tab-content mt-3">
 
-<!-- ================= USUARIOS ================= -->
-<div class="tab-pane fade show active" id="usuarios">
+    <!-- ================= USUARIOS ================= -->
+    <div class="tab-pane fade show active" id="usuarios">
 
-    <asp:GridView ID="gvUsuarios" runat="server"
-        CssClass="table table-striped"
-        AutoGenerateColumns="False"
-        DataKeyNames="IdUsuario"
-        OnRowCommand="gvUsuarios_RowCommand"
-        OnRowDataBound="gvUsuarios_RowDataBound">
+        <asp:Button ID="btnAgregarUsuario" runat="server"
+            Text="Agregar Usuario"
+            CssClass="btn btn-success"
+            OnClick="btnAgregarUsuario_Click" />
 
-        <Columns>
-            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-            <asp:BoundField DataField="Email" HeaderText="Email" />
+        <br />
+        <br />
 
-            <asp:TemplateField HeaderText="Rol">
-                <ItemTemplate>
-                    <asp:DropDownList ID="ddlRol" runat="server"
-                        AutoPostBack="true"
-                        OnSelectedIndexChanged="ddlRol_SelectedIndexChanged">
-                        <asp:ListItem Text="Admin" />
-                        <asp:ListItem Text="Cliente" />
-                    </asp:DropDownList>
-                </ItemTemplate>
-            </asp:TemplateField>
+        <asp:GridView ID="gvUsuarios" runat="server"
+            CssClass="table table-striped"
+            AutoGenerateColumns="False"
+            DataKeyNames="IdUsuario"
+            OnRowCommand="gvUsuarios_RowCommand"
+            OnRowDataBound="gvUsuarios_RowDataBound">
+            <Columns>
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:TemplateField HeaderText="Rol">
+                    <ItemTemplate>
+                        <asp:DropDownList ID="ddlRol" runat="server"
+                            AutoPostBack="true"
+                            OnSelectedIndexChanged="ddlRol_SelectedIndexChanged">
+                            <asp:ListItem Text="Admin" />
+                            <asp:ListItem Text="Cliente" />
+                        </asp:DropDownList>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Activo">
+                    <ItemTemplate>
+                        <asp:CheckBox ID="chkActivo" runat="server"
+                            AutoPostBack="true"
+                            OnCheckedChanged="chkActivo_CheckedChanged" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="Telefono" HeaderText="Teléfono" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" Text="Editar"
+                            CssClass="btn btn-sm btn-primary me-1"
+                            CommandName="Editar"
+                            CommandArgument='<%# Eval("IdUsuario") %>' />
+                        <asp:Button runat="server" Text="Eliminar"
+                            CssClass="btn btn-sm btn-danger"
+                            CommandName="Eliminar"
+                            CommandArgument='<%# Eval("IdUsuario") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
 
-            <asp:TemplateField HeaderText="Activo">
-                <ItemTemplate>
-                    <asp:CheckBox ID="chkActivo" runat="server"
-                        AutoPostBack="true"
-                        OnCheckedChanged="chkActivo_CheckedChanged" />
-                </ItemTemplate>
-            </asp:TemplateField>
+    </div>
 
-            <asp:BoundField DataField="Telefono" HeaderText="Teléfono" />
+    <!-- ================= PRODUCTOS ================= -->
+    <div class="tab-pane fade" id="productos">
+        <asp:Button ID="btnAgregarProducto" runat="server"
+            Text="Agregar Producto"
+            CssClass="btn btn-success"
+            OnClick="btnAgregarProducto_Click" />
 
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button runat="server" Text="Editar"
-                        CssClass="btn btn-sm btn-primary me-1"
-                        CommandName="Editar"
-                        CommandArgument='<%# Eval("IdUsuario") %>' />
+        <br />
+        <br />
 
-                    <asp:Button runat="server" Text="Eliminar"
-                        CssClass="btn btn-sm btn-danger"
-                        CommandName="Eliminar"
-                        CommandArgument='<%# Eval("IdUsuario") %>' />
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
+        <asp:GridView ID="gvProductos" runat="server"
+            CssClass="table table-striped"
+            AutoGenerateColumns="False"
+            DataKeyNames="IdProducto"
+            OnRowCommand="gvProductos_RowCommand"
+            OnRowDataBound="gvProductos_RowDataBound">
+            <Columns>
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
+                <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" />
+                <asp:BoundField DataField="Stock" HeaderText="Stock" />
+                <asp:TemplateField HeaderText="Activo">
+                    <ItemTemplate>
+                        <asp:CheckBox ID="chkActivoProd" runat="server"
+                            AutoPostBack="true"
+                            OnCheckedChanged="chkActivoProd_CheckedChanged" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button runat="server" Text="Editar"
+                            CssClass="btn btn-sm btn-primary me-1"
+                            CommandName="Editar"
+                            CommandArgument='<%# Eval("IdProducto") %>' />
+                        <asp:Button runat="server" Text="Eliminar"
+                            CssClass="btn btn-sm btn-danger"
+                            CommandName="Eliminar"
+                            CommandArgument='<%# Eval("IdProducto") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
 
-    <asp:Button ID="btnAgregarUsuario" runat="server"
-        Text="Agregar Usuario"
-        CssClass="btn btn-success"
-        OnClick="btnAgregarUsuario_Click" />
-</div>
+    </div>
 
-<!-- ================= PRODUCTOS ================= -->
-<div class="tab-pane fade" id="productos">
-
-    <asp:GridView ID="gvProductos" runat="server"
-        CssClass="table table-striped"
-        AutoGenerateColumns="False"
-        DataKeyNames="IdProducto"
-        OnRowCommand="gvProductos_RowCommand">
-
-        <Columns>
-            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-            <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
-            <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" />
-            <asp:BoundField DataField="Stock" HeaderText="Stock" />
-
-            <asp:TemplateField HeaderText="Activo">
-                <ItemTemplate>
-                    <asp:CheckBox ID="chkActivoProd" runat="server"
-                        AutoPostBack="true"
-                        OnCheckedChanged="chkActivoProd_CheckedChanged" />
-                </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button runat="server" Text="Editar"
-                        CssClass="btn btn-sm btn-primary me-1"
-                        CommandName="Editar"
-                        CommandArgument='<%# Eval("IdProducto") %>' />
-
-                    <asp:Button runat="server" Text="Eliminar"
-                        CssClass="btn btn-sm btn-danger"
-                        CommandName="Eliminar"
-                        CommandArgument='<%# Eval("IdProducto") %>' />
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
-
-    <asp:Button ID="btnAgregarProducto" runat="server"
-        Text="Agregar Producto"
-        CssClass="btn btn-success"
-        OnClick="btnAgregarProducto_Click" />
-</div>
-
-<!-- ================= PEDIDOS ================= -->
-<div class="tab-pane fade" id="pedidos">
-
-    <asp:GridView ID="gvPedidos" runat="server"
-        CssClass="table table-striped"
-        AutoGenerateColumns="False"
-        DataKeyNames="IdPedido"
-        OnRowCommand="gvPedidos_RowCommand"
-        OnRowDataBound="gvPedidos_RowDataBound">
-
-        <Columns>
-            <asp:BoundField DataField="IdPedido" HeaderText="Pedido" />
-            <asp:BoundField DataField="NombreUsuario" HeaderText="Cliente" />
-            <asp:BoundField DataField="Total" HeaderText="Total" DataFormatString="{0:C}" />
-
-            <asp:TemplateField HeaderText="Estado">
-                <ItemTemplate>
-                    <asp:DropDownList ID="ddlEstadoPedido" runat="server"
-                        AutoPostBack="true"
-                        OnSelectedIndexChanged="ddlEstadoPedido_SelectedIndexChanged">
-                        <asp:ListItem Text="Pendiente" />
-                        <asp:ListItem Text="Pagado" />
-                        <asp:ListItem Text="Enviado" />
-                        <asp:ListItem Text="Cancelado" />
-                    </asp:DropDownList>
-                </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
-
-            <asp:ButtonField Text="Ver"
-                ButtonType="Button"
-                CommandName="VerDetalle"
-                ControlStyle-CssClass="btn btn-sm btn-info" />
-        </Columns>
-    </asp:GridView>
-</div>
+    <!-- ================= PEDIDOS ================= -->
+    <div class="tab-pane fade" id="pedidos">
+        <asp:GridView ID="gvPedidos" runat="server"
+            CssClass="table table-striped"
+            AutoGenerateColumns="False"
+            DataKeyNames="IdPedido"
+            OnRowCommand="gvPedidos_RowCommand"
+            OnRowDataBound="gvPedidos_RowDataBound">
+            <Columns>
+                <asp:BoundField DataField="IdPedido" HeaderText="Pedido" />
+                <asp:BoundField DataField="NombreUsuario" HeaderText="Cliente" />
+                <asp:BoundField DataField="Total" HeaderText="Total" DataFormatString="{0:C}" />
+                <asp:TemplateField HeaderText="Estado">
+                    <ItemTemplate>
+                        <asp:DropDownList ID="ddlEstadoPedido" runat="server"
+                            AutoPostBack="true"
+                            OnSelectedIndexChanged="ddlEstadoPedido_SelectedIndexChanged">
+                            <asp:ListItem Text="Pendiente" />
+                            <asp:ListItem Text="Pagado" />
+                            <asp:ListItem Text="Enviado" />
+                            <asp:ListItem Text="Cancelado" />
+                        </asp:DropDownList>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
+                <asp:ButtonField Text="Ver"
+                    ButtonType="Button"
+                    CommandName="VerDetalle"
+                    ControlStyle-CssClass="btn btn-sm btn-info" />
+            </Columns>
+        </asp:GridView>
+    </div>
 
 </div>
 
@@ -180,30 +173,25 @@
 <div class="modal fade" id="modalEliminar" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-
             <div class="modal-header">
                 <h5 class="modal-title">Confirmar eliminación</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-
             <div class="modal-body">
                 ¿Estás seguro de que deseas eliminar este registro?
             </div>
-
             <div class="modal-footer">
                 <asp:Button ID="btnConfirmarEliminar"
                     runat="server"
                     Text="Sí, eliminar"
                     CssClass="btn btn-danger"
                     OnClick="btnConfirmarEliminar_Click" />
-
                 <button type="button"
                     class="btn btn-secondary"
                     data-bs-dismiss="modal">
                     Cancelar
                 </button>
             </div>
-
         </div>
     </div>
 </div>

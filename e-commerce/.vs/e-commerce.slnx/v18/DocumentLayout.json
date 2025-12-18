@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\eligi\\desktop\\e-commercev2listo parasubir\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuWeb.Master",
+              "DocumentMoniker": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
+              "ToolTip": "C:\\Users\\EliGi\\Desktop\\E-commercev2Listo ParaSubir\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeToolTip": "e-commerce\\MenuWeb.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-18T00:21:54.866Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

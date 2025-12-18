@@ -215,7 +215,36 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public List<Producto> ListarProductos()
+        {
+            List<Producto> lista = new List<Producto>();
+            try
+            {
+                datos.setearConsulta("SELECT IdProducto, Nombre, Descripcion, Precio, Stock, Activo, IdCategoria, ImagenUrl FROM Producto");
+                datos.ejecutarLectura();
 
+                while (datos.Lector.Read())
+                {
+                    lista.Add(new Producto
+                    {
+                        IdProducto = (int)datos.Lector["IdProducto"],
+                        Nombre = datos.Lector["Nombre"].ToString(),
+                        Descripcion = datos.Lector["Descripcion"].ToString(),
+                        Precio = (decimal)datos.Lector["Precio"],
+                        Stock = (int)datos.Lector["Stock"],
+                        Activo = (bool)datos.Lector["Activo"],
+                        IdCategoria = (int)datos.Lector["IdCategoria"],
+                        ImagenUrl = datos.Lector["ImagenUrl"] != DBNull.Value ? datos.Lector["ImagenUrl"].ToString() : ""
+                    });
+                }
+
+                return lista;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 
 
