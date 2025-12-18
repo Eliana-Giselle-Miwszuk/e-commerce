@@ -58,5 +58,18 @@ namespace e_commerce
             Session.Clear();
             Response.Redirect("Default.aspx");
         }
+
+        //Busqueda y redireccion a productos
+        protected void btnBuscarMaster_Click(object sender, EventArgs e)
+        {
+            string filtro = txtBusquedaMaster.Text.Trim();
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                // Redirige a Productos.aspx con el filtro en query string
+                Response.Redirect($"Productos.aspx?busqueda={Server.UrlEncode(filtro)}");
+            }
+            // Si está vacío, no hace nada
+        }
     }
 }

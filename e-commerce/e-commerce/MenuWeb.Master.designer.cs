@@ -87,6 +87,24 @@ namespace e_commerce
         protected global::System.Web.UI.WebControls.PlaceHolder phAdmin;
 
         /// <summary>
+        /// Control txtBusquedaMaster.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBusquedaMaster;
+
+        /// <summary>
+        /// Control btnBuscarMaster.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscarMaster;
+
+        /// <summary>
         /// Control upCarrito.
         /// </summary>
         /// <remarks>

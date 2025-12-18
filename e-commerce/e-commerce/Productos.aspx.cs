@@ -12,12 +12,32 @@ namespace e_commerce
         private ProductoNegocio negocio = new ProductoNegocio();
         private CategoriaNegocio negocioCategoria = new CategoriaNegocio();
 
-        protected void Page_Load(object sender, EventArgs e)
+        /*protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 CargarCategorias();
                 CargarProductos();
+            }
+        }*/
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                CargarCategorias();
+
+                string filtro = Request.QueryString["busqueda"] ?? ""; //Recibo la busqueda
+                if (!string.IsNullOrEmpty(filtro))
+                {
+                    txtBusqueda.Text = filtro;
+                    int categoriaId = int.Parse(ddlCategorias.SelectedValue);
+                    CargarProductos(filtro, categoriaId);
+                }
+                else
+                {
+                    CargarProductos();
+                }
             }
         }
 

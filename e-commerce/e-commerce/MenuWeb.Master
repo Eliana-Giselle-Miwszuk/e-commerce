@@ -169,11 +169,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Perfil.aspx">Mi Perfil</a>
                             </li>
-                             <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link disabled" href="#" runat="server" id="lblUsuarioNav"></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" id="lnkLogout" runat="server" onserverclick="CerrarSesion_ServerClick"><span style="color:red;">Salir</span></a>
+                                <a class="nav-link" href="#" id="lnkLogout" runat="server" onserverclick="CerrarSesion_ServerClick"><span style="color: red;">Salir</span></a>
                             </li>
                         </asp:PlaceHolder>
                         <!-- Usuario no logueado -->
@@ -195,8 +195,8 @@
                     </ul>
 
                     <div class="d-flex w-50 mx-auto">
-                        <asp:TextBox runat="server" CssClass="form-control" Placeholder="Buscar productos, marcas y más..." />
-                        <a class="btn btn-dark ms-2" href="#">Buscar</a>
+                        <asp:TextBox ID="txtBusquedaMaster" runat="server" CssClass="form-control flex-grow-1" Placeholder="Buscar productos, marcas y más..." />
+                        <asp:Button ID="btnBuscarMaster" runat="server" Text="Buscar" CssClass="btn btn-dark ms-2" OnClick="btnBuscarMaster_Click" />
                     </div>
 
                     <asp:UpdatePanel ID="upCarrito" runat="server" UpdateMode="Conditional">

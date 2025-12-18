@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Trabj Final diciembre 2025\\e-commerce\\e-commerce\\",
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\trabj final diciembre 2025\\e-commerce\\e-commerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\menuweb.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,15 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabj Final diciembre 2025\\e-commerce\\e-commerce\\Negocio\\UsuarioNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabj Final diciembre 2025\\e-commerce\\e-commerce\\Negocio\\UsuarioNegocio.cs",
-              "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T02:47:11.516Z",
+              "Title": "MenuWeb.Master",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
+              "RelativeToolTip": "e-commerce\\MenuWeb.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-18T03:04:52.271Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuWeb.Master.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master.cs",
+              "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master.cs",
+              "RelativeToolTip": "e-commerce\\MenuWeb.Master.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T03:04:55.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Productos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx.cs",
+              "RelativeDocumentMoniker": "e-commerce\\Productos.aspx.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx.cs",
+              "RelativeToolTip": "e-commerce\\Productos.aspx.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwB8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T03:03:43.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\UsuarioNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\UsuarioNegocio.cs",
+              "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T02:47:11.516Z"
             }
           ]
         }
