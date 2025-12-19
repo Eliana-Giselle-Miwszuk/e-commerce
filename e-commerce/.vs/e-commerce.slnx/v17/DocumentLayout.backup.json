@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\agregareditarproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\agregareditarproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\dominio\\pedidoaadminview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\pedidoaadminview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE1DA6EC-7CCB-47A2-A145-0E185A95FEAB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\negocio\\productonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|solutionrelative:negocio\\productonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|c:\\users\\usuario\\desktop\\trabajo final ecommerce diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\menuweb.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\menuweb.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC46EFFD-91BB-4AED-9657-F2922B9F033B}|e-commerce\\e-commerce.csproj|solutionrelative:e-commerce\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{796A0A89-D6B6-450F-89F3-E4583B92AE04}|Negocio\\Negocio.csproj|C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +62,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AgregarEditarProducto.aspx",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\AgregarEditarProducto.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\AgregarEditarProducto.aspx",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\AgregarEditarProducto.aspx",
+              "RelativeToolTip": "e-commerce\\AgregarEditarProducto.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-19T00:39:35.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PedidoaAdminView.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Dominio\\PedidoaAdminView.cs",
+              "RelativeDocumentMoniker": "Dominio\\PedidoaAdminView.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Dominio\\PedidoaAdminView.cs",
+              "RelativeToolTip": "Dominio\\PedidoaAdminView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T00:26:17.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Registro.aspx",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Registro.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\Registro.aspx",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Registro.aspx",
+              "RelativeToolTip": "e-commerce\\Registro.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-19T00:21:45.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Dominio\\Categoria.cs",
+              "RelativeDocumentMoniker": "Dominio\\Categoria.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Dominio\\Categoria.cs",
+              "RelativeToolTip": "Dominio\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T00:20:57.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriaNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\CategoriaNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\CategoriaNegocio.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\CategoriaNegocio.cs",
+              "RelativeToolTip": "Negocio\\CategoriaNegocio.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T00:20:35.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "e-commerce\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Default.aspx.cs",
+              "RelativeToolTip": "e-commerce\\Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T00:17:59.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductoNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\ProductoNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\ProductoNegocio.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\ProductoNegocio.cs",
+              "RelativeToolTip": "Negocio\\ProductoNegocio.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAuwJsAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T23:34:16.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Productos.aspx",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\Productos.aspx",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx",
+              "RelativeToolTip": "e-commerce\\Productos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-18T23:32:17.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Default.aspx",
+              "RelativeDocumentMoniker": "e-commerce\\Default.aspx",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Default.aspx",
+              "RelativeToolTip": "e-commerce\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-18T22:32:01.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MenuWeb.Master",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master",
               "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master",
@@ -43,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "MenuWeb.Master.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\MenuWeb.Master.cs",
               "RelativeDocumentMoniker": "e-commerce\\MenuWeb.Master.cs",
@@ -55,19 +208,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Productos.aspx.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx.cs",
               "RelativeDocumentMoniker": "e-commerce\\Productos.aspx.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\e-commerce\\Productos.aspx.cs",
               "RelativeToolTip": "e-commerce\\Productos.aspx.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAwB8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwC0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T03:03:43.855Z"
+              "WhenOpened": "2025-12-18T03:03:43.855Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "UsuarioNegocio.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Trabajo Final Ecommerce Diciembre 2025\\e-commerce\\e-commerce\\Negocio\\UsuarioNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",

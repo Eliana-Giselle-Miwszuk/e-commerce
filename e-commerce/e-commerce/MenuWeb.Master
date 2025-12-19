@@ -83,11 +83,6 @@
                 margin-top: 5px;
             }
         }
-        /*Agregado violeta*/
-        /* ============================= */
-        /* VIOLETA ESTILO VENTAS (SAFE)  */
-        /* ============================= */
-
         /* Sobrescribe bg-warning sin tocar HTML */
         .navbar.bg-warning {
             background: linear-gradient(135deg, #6a0dad, #8b2be2) !important;

@@ -16,7 +16,7 @@ namespace Negocio
             List<Categoria> lista = new List<Categoria>();
             try
             {
-                datos.setearConsulta("SELECT IdCategoria, Nombre FROM Categoria WHERE Activa = 1");
+                datos.setearConsulta("SELECT IdCategoria, Nombre FROM Categoria WHERE Activa = 1 AND IdCategoria <> 7");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
